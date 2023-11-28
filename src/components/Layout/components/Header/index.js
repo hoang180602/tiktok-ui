@@ -3,13 +3,14 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
+import routesConfig from '~/config/routes';
 import Button from '~/components/Button';
 import images from '~/assets/images';
 import styles from './Header.module.scss';
 import Menu from '~/components/Popper/Popper/Menu';
 import Search from '../Search';
-
 import {
     UploadIcon,
     MessageIcon,
@@ -91,9 +92,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div>
+                <Link to={routesConfig.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Tiktok"></img>
-                </div>
+                </Link>
 
                 <Search />
 
@@ -128,7 +129,7 @@ function Header() {
                             <Image
                                 className={cx('use-avatar')}
                                 alt="Nguyen Huu Hoang"
-                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/68deab055418a64fd00ab0d00d76b84b.jpeg?x-expires=1701086400&x-signature=x0E1KApN1XTJoU8jojffNEh0nDE%3D"
+                                src="https://th.bing.com/th/id/R.86eb50bed2cd35abb2a00762c8fbb7d6?rik=Y5RyZmCe%2bXnjFg&pid=ImgRaw&r=0"
                             ></Image>
                         ) : (
                             <button className={cx('more-btn')}>
